@@ -1,21 +1,35 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Galeria obrazków</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox/dist/basicLightbox.min.css"
+    />
+    <style>
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .gallery-item {
+        margin: 10px;
+      }
+      .gallery-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <ul class="gallery">
-      <li class="gallery-item">
-        <a class="gallery-link" href="large-image.jpg">
-          <img
-            class="gallery-image"
-            src="small-image.jpg"
-            data-source="large-image.jpg"
-            alt="Image description"
-          />
-        </a>
-      </li>
-    </ul>
+    <ul class="gallery"></ul>
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox/dist/basicLightbox.min.js"></script>
+    <script src="gallery.js"></script>
   </body>
 </html>
